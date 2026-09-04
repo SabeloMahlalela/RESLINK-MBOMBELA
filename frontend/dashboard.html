@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Dashboard | ResLink Mbombela</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ResLink
+        </div>
+
+        <nav>
+
+            <a
+                href="dashboard.html"
+                class="active"
+            >
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                Accommodation
+            </a>
+
+            <a
+                href="#"
+                id="logout-link"
+            >
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- =========================
+             WELCOME
+        ========================== -->
+
+        <section class="welcome-section">
+
+            <h1>
+                Welcome,
+                <span id="student-name">
+                    Student
+                </span>!
+            </h1>
+
+            <p>
+                Manage your student accommodation
+                applications and profile.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             PROFILE
+        ========================== -->
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-section-header">
+
+                <div>
+
+                    <h2>
+                        My Profile
+                    </h2>
+
+                    <p>
+                        Your registered student information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="student-profile"
+                class="profile-card"
+            >
+
+                Loading profile...
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             APPLICATIONS
+        ========================== -->
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-section-header">
+
+                <div>
+
+                    <h2>
+                        My Applications
+                    </h2>
+
+                    <p>
+                        Track the status of your accommodation
+                        applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="my-applications"
+                class="application-list"
+            >
+
+                Loading applications...
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FIND ACCOMMODATION
+        ========================== -->
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-section-header">
+
+                <div>
+
+                    <h2>
+                        Find Accommodation
+                    </h2>
+
+                    <p>
+                        Browse available accommodation and
+                        apply for a room that suits your needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="dashboard-button"
+            >
+                Browse Accommodation
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 ResLink Mbombela.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

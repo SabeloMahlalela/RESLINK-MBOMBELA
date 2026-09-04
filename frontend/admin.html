@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard | ResLink</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ResLink Admin
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Website
+            </a>
+
+            <a href="#" id="admin-logout">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+
+    <main class="admin-container">
+
+        <section class="admin-header">
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+            <p>
+                Manage student accommodation and
+                applications.
+            </p>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <section class="admin-stats">
+
+            <div class="stat-card">
+
+                <h3>
+                    Accommodations
+                </h3>
+
+                <p id="total-accommodations">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>
+                    Rooms
+                </h3>
+
+                <p id="total-rooms">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>
+                    Students
+                </h3>
+
+                <p id="total-students">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>
+                    Pending Applications
+                </h3>
+
+                <p id="pending-applications">
+                    0
+                </p>
+
+            </div>
+
+        </section>
+
+<!-- =========================
+     ACCOMMODATION MANAGEMENT
+========================= -->
+
+<section class="admin-section">
+
+    <div class="admin-section-header">
+
+        <div>
+
+            <h2>
+                Manage Accommodations
+            </h2>
+
+            <p>
+                Add and manage student accommodation.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADD ACCOMMODATION FORM -->
+
+    <form
+        id="accommodation-form"
+        class="admin-form"
+    >
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="accommodation-name">
+                    Accommodation Name
+                </label>
+
+                <input
+                    type="text"
+                    id="accommodation-name"
+                    placeholder="e.g. Tallis Towers"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="accommodation-address">
+                    Address
+                </label>
+
+                <input
+                    type="text"
+                    id="accommodation-address"
+                    placeholder="e.g. Mbombela, Mpumalanga"
+                    required
+                >
+
+            </div>
+<div class="form-group">
+
+    <label for="accommodation-image">
+        Accommodation Image URL
+    </label>
+
+    <input
+        type="url"
+        id="accommodation-image"
+        placeholder="https://example.com/image.jpg"
+    >
+
+    <small>
+        Enter a direct link to the accommodation image.
+    </small>
+
+</div>
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="accommodation-contact">
+                    Contact Number
+                </label>
+
+                <input
+                    type="text"
+                    id="accommodation-contact"
+                    placeholder="e.g. 0131234567"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="accommodation-institution">
+                    Institution ID
+                </label>
+
+                <input
+                    type="number"
+                    id="accommodation-institution"
+                    placeholder="e.g. 1"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="accommodation-description">
+                Description
+            </label>
+
+            <textarea
+                id="accommodation-description"
+                rows="4"
+                placeholder="Describe the accommodation..."
+            ></textarea>
+
+        </div>
+
+
+        <div class="checkbox-group">
+
+            <input
+                type="checkbox"
+                id="accommodation-accredited"
+                checked
+            >
+
+            <label
+                for="accommodation-accredited"
+            >
+                Accredited Accommodation
+            </label>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="admin-button"
+        >
+            Add Accommodation
+        </button>
+
+    </form>
+
+
+    <!-- ACCOMMODATION LIST -->
+
+    <div
+        id="admin-accommodations"
+        class="admin-accommodation-list"
+    >
+
+        Loading accommodations...
+
+    </div>
+
+</section>
+
+        <!-- APPLICATIONS -->
+
+        <section class="admin-section">
+
+            <h2>
+                Applications
+            </h2>
+
+            <div id="admin-applications">
+
+                Loading applications...
+
+            </div>
+
+        </section>
+
+
+      <!-- ROOMS -->
+
+<section class="admin-section">
+
+    <h2>
+        Manage Rooms
+    </h2>
+
+    <p>
+        Add rooms to your student accommodations.
+    </p>
+
+
+    <!-- ADD ROOM FORM -->
+
+    <form
+        id="room-form"
+        class="admin-form"
+    >
+
+        <div class="form-row">
+
+            <!-- ACCOMMODATION -->
+
+            <div class="form-group">
+
+                <label for="room-accommodation">
+                    Accommodation
+                </label>
+
+                <select
+                    id="room-accommodation"
+                    required
+                >
+
+                    <option value="">
+                        Select accommodation
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ROOM NUMBER -->
+
+            <div class="form-group">
+
+                <label for="room-number">
+                    Room Number
+                </label>
+
+                <input
+                    type="text"
+                    id="room-number"
+                    placeholder="e.g. T103"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <!-- ROOM TYPE -->
+
+            <div class="form-group">
+
+                <label for="room-type">
+                    Room Type
+                </label>
+
+                <select
+                    id="room-type"
+                    required
+                >
+
+                    <option value="">
+                        Select room type
+                    </option>
+
+                    <option value="Single">
+                        Single
+                    </option>
+
+                    <option value="Sharing">
+                        Sharing
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PRICE -->
+
+            <div class="form-group">
+
+                <label for="room-price">
+                    Monthly Price
+                </label>
+
+                <input
+                    type="number"
+                    id="room-price"
+                    placeholder="e.g. 3500"
+                    min="0"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <!-- CAPACITY -->
+
+            <div class="form-group">
+
+                <label for="room-capacity">
+                    Capacity
+                </label>
+
+                <input
+                    type="number"
+                    id="room-capacity"
+                    placeholder="e.g. 2"
+                    min="1"
+                    required
+                >
+
+            </div>
+
+
+            <!-- OCCUPIED -->
+
+            <div class="form-group">
+
+                <label for="room-occupied">
+                    Occupied
+                </label>
+
+                <input
+                    type="number"
+                    id="room-occupied"
+                    value="0"
+                    min="0"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="admin-button"
+        >
+            Add Room
+        </button>
+
+    </form>
+
+
+    <!-- EXISTING ROOMS -->
+
+    <div id="admin-rooms">
+
+        Loading rooms...
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 ResLink Mbombela
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
