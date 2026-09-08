@@ -130,37 +130,7 @@ The main objectives of ResLink Mbombela are to:
 ## System Architecture
 
 ResLink Mbombela uses a client-server architecture consisting of a frontend, Flask backend and MySQL database.
-
-```text
-┌──────────────────────────────┐
-│          FRONTEND            │
-│                              │
-│ HTML                         │
-│ CSS                          │
-│ JavaScript                   │
-│ Fetch API                    │
-└──────────────┬───────────────┘
-               │
-               │ HTTP Requests
-               │ REST API
-               ▼
-┌──────────────────────────────┐
-│           BACKEND            │
-│                              │
-│ Python                       │
-│ Flask                        │
-│ Flask-SQLAlchemy             │
-│ Flask-CORS                   │
-└──────────────┬───────────────┘
-               │
-               │ Database Queries
-               ▼
-┌──────────────────────────────┐
-│           DATABASE           │
-│                              │
-│            MySQL             │
-└──────────────────────────────┘
-```
+<img width="658" height="645" alt="image" src="https://github.com/user-attachments/assets/aa06a5df-6e4c-42a3-8b98-fcb9f1d80259" />
 
 ## Database Design
 
