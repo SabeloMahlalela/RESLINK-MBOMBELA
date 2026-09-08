@@ -237,34 +237,8 @@ The available spaces are calculated dynamically by the backend when room informa
 
 The student accommodation application process follows these steps:
 
-```text
-Student Registration
-        ↓
-Student Login
-        ↓
-Browse Accommodation
-        ↓
-View Available Rooms
-        ↓
-Select Room
-        ↓
-Submit Application
-        ↓
-Application Pending
-        ↓
-Administrator Reviews Application
-        ↓
-   ┌───────────────┐
-   │               │
-   ▼               ▼
-Approved        Rejected
-   │
-   ▼
-Room Occupancy Updated
-   │
-   ▼
-Student Views Allocation
-```
+<img width="486" height="689" alt="image" src="https://github.com/user-attachments/assets/d9aedb3e-1db5-403c-9950-e0f362acc727" />
+
 
 ## Application Rules
 
