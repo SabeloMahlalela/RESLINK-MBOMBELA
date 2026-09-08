@@ -605,23 +605,8 @@ The application process was tested by:
 
 The main student workflow was tested from beginning to end:
 
-```text
-Student Registration
-        ↓
-Student Login
-        ↓
-Browse Accommodation
-        ↓
-View Room
-        ↓
-Submit Application
-        ↓
-Administrator Reviews Application
-        ↓
-Approve or Reject
-        ↓
-Student Views Application Status
-```
+<img width="729" height="703" alt="image" src="https://github.com/user-attachments/assets/e3fc92d0-14b9-448a-b111-2101526f834b" />
+
 
 These tests helped identify and resolve development issues throughout the project.
 
